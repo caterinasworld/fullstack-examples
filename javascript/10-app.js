@@ -5,7 +5,8 @@ let loading = document.querySelector('#loading');
 
 let addToDOM = (element, item) => {
   let li = document.createElement(element);
-  li.innerText = `${item.name} - ${item.numberOfPages} pages`;
+  li.innerText = `${item.name} - by ${item.authors[0]} 
+    ${item.released.substr(0, 4)} - ${item.numberOfPages} pages`;
   li.setAttribute('style', 'font-size: 1.2em;');
   li.setAttribute('class', 'list-item');
   app.append(li);

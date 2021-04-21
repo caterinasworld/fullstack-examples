@@ -25,31 +25,31 @@ let printGroup = (description, result) => {
 let arrayFunctionsExample = () => {
   printGroup('Initial Array', characters);
 
-  // Exercise: return an array with each name in uppercase
-  // Example: "ARYA"
+  // Example: return an array with each name in uppercase
+  // Format: "ARYA"
   const uppercase = characters.map((item) => item.name.toUpperCase());
   printGroup('Array of characters from house Stark', uppercase);
 
-  // Exercise: return an array with the name and house of each character
-  // Example: "Arya, of House Stark"
+  // Example: return an array with the name and house of each character
+  // Format: "Arya, of House Stark"
   const intros = characters.map(
     (item) => `${item.name}, of House ${item.house}`
   );
   printGroup('Array of character intros, with name and house', intros);
 
-  // Exercise: return an array with the characters from House Stark
+  // Example: return an array with the characters from House Stark
   const starks = characters.filter((item) => item.house === 'Stark');
   printGroup('Array of characters from house Stark', starks);
 
-  // Exercise: return an array with the characters with even ids
+  // Example: return an array with the characters with even ids
   const evens = characters.filter((item) => item.id % 2 === 0);
   printGroup('Array of characters with even ids', evens);
 
-  // Exercise: return the sum of all of the character ids.
+  // Example: return the sum of all of the character ids.
   const sum = characters.reduce((acc, curr) => acc + curr.id, 0);
   printGroup('Sum of all of the character ids', sum);
 
-  // Exercise: return the number of characters from each house
+  // Example: return the number of characters from each house
   const houses = characters.reduce((total, item) => {
     total.hasOwnProperty(item.house)
       ? total[item.house]++

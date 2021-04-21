@@ -12,7 +12,12 @@ let objectsExample = () => {
 
   const values = Object.values(houses);
   console.log(values);
-  // [ "Ours is the Fury", "We Do Not Sow", "Unbowed, Unbent, Unbroken", "Winter is Coming" ]
+  // [
+  //   'Ours is the Fury',
+  //   'We Do Not Sow',
+  //   'Unbowed, Unbent, Unbroken',
+  //   'Winter is Coming'
+  // ]
 
   const entries = Object.entries(houses);
   console.log(entries);
@@ -30,4 +35,4 @@ let objectsExample = () => {
   // House Stark's motto: Winter is Coming
 };
 
-// objectsExample();
+objectsExample();

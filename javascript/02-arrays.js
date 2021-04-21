@@ -1,4 +1,4 @@
-let example = () => {
+let arrayFunctionsExample = () => {
   let houses = [
     'Barantheon',
     'Bolton',
@@ -73,4 +73,4 @@ let example = () => {
   // Tully
 };
 
-// example();
+arrayFunctionsExample();

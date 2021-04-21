@@ -28,6 +28,6 @@ let fetchAllExample = (url) => {
     .catch((error) => console.log(error));
 };
 
-// fetchOneExample(urlOne);
+fetchOneExample(urlOne);
 
-// fetchAllExample(urlAll);
+fetchAllExample(urlAll);

@@ -21,4 +21,4 @@ let promiseExample = () => {
     });
 };
 
-// promiseExample();
+promiseExample();
