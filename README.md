@@ -9,8 +9,8 @@ This repository contains starter files and potential solutions to the class exam
 - Node
 - Express
 - Pug Templating Engine
-- React
-- TypeScript
-- Vue
 - Socket.io
+- TypeScript
+- React
+- Vue
 - Storage
