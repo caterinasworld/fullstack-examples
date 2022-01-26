@@ -3,7 +3,6 @@
 This repository contains starter files and potential solutions to the class examples we go over.
 
 - HTML
-- Accessibility
 - CSS
 - Bootstrap
 - JavaScript
@@ -13,5 +12,5 @@ This repository contains starter files and potential solutions to the class exam
 - React
 - TypeScript
 - Vue
-- Sockets
+- Socket.io
 - Storage
