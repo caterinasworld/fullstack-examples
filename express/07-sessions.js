@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.use(
   session({
@@ -11,8 +11,8 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 86400000
-    }
+      maxAge: 86400000,
+    },
   })
 );
 

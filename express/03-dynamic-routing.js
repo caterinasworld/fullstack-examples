@@ -2,8 +2,7 @@ const express = require('express');
 const characters = require('./characters');
 
 const app = express();
-const port = process.env.PORT || 5000;
-
+const port = process.env.PORT || 5001;
 
 let getCharacters = () => {
   let result = '';
@@ -14,10 +13,9 @@ let getCharacters = () => {
   });
 
   return result;
-}
+};
 
 app.get('/', (req, res) => {
-
   let result = getCharacters();
 
   res.status(200);
