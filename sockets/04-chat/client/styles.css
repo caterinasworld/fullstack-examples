@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --teal: #008080;
+  --white: #fbfbfb;
+  --black: #0a0a0a;
+}
+
+.chat {
+  min-height: 40vh;
+  max-height: 66vh;
+  overflow: scroll;
+}
+
+.chat > * {
+  margin: 0.8rem 0;
+}
+
+.username {
+  color: var(--teal);
+}
+
+.submission {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+}
+
+.submission > * {
+  display: block;
+  width: 400px;
+  padding: 0.5rem 0;
+}
+
+.submission > input {
+  border: 1px solid var(--black);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 10px;
+  border-color: var(--teal);
+  background-color: var(--teal);
+  color: var(--white);
+  font-size: 1.2rem;
+}
