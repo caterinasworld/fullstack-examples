@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM vs Virtual DOM</title>
+    <link rel="stylesheet" href="../_styles/styles.css" />
+    <link rel="stylesheet" href="../../_styles/styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <div id="app"></div>
+    <h1>React - DOM vs Virtual DOM</h1>
+    <div id="appJS"></div>
+    <div id="appReact"></div>
+
     <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
     <script type="text/babel">
-      const root = document.getElementById('root');
-      const app = document.getElementById('app');
+      //
+      // Vanilla JavaScript
+      //
+      const root = document.getElementById('appJS');
 
       function getTimeJS() {
         const time = new Date().toLocaleTimeString();
@@ -21,6 +28,13 @@
           <p>Current time: ${time}</p>`;
         root.innerHTML = element;
       }
+
+      setInterval(getTimeJS, 1000);
+
+      //
+      // React
+      //
+      const app = document.getElementById('appReact');
 
       function getTimeReact() {
         const current = new Date().toLocaleTimeString();
@@ -30,10 +44,9 @@
             <p>Current time: {current}</p>
           </div>
         );
-        ReactDOM.render(element, app);
+        ReactDOM.render(element, appReact);
       }
 
-      setInterval(getTimeJS, 1000);
       setInterval(getTimeReact, 1000);
     </script>
   </body>

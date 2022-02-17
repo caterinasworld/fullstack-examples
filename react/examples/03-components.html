@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React - Class Component vs Functional Component</title>
+    <link rel="stylesheet" href="../../_styles/styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <div id="app"></div>
+    <h1>React - Class Component vs Function Component</h1>
+    <div id="appClass"></div>
+    <div id="appFunction"></div>
     <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
     <script type="text/babel">
-      // create a class component and use component lifecycle methods
+      // Create a class component with component lifecycle methods
       class ClassComponent extends React.Component {
         constructor(props) {
           super(props);
@@ -22,11 +24,11 @@
         }
 
         componentDidMount() {
-          console.log('component did mount');
+          console.log('Class component - component did mount');
         }
 
         componentDidUpdate() {
-          console.log('component did update');
+          console.log('Class component - component did update');
         }
 
         render() {
@@ -43,13 +45,13 @@
         }
       }
 
-      // create a function component and use hooks
+      // Create a function component + hooks
       function FunctionComponent() {
         const [count, setCount] = React.useState(0);
-        const [query, setQuery] = React.useState('hello world');
+        const [query, setQuery] = React.useState('Hello world');
 
         React.useEffect(() => {
-          console.log('running useEffect');
+          console.log('Function component - running useEffect');
         }, [count]);
 
         return (
@@ -61,8 +63,11 @@
         );
       }
 
-      ReactDOM.render(<ClassComponent />, document.getElementById('root'));
-      ReactDOM.render(<FunctionComponent />, document.getElementById('app'));
+      ReactDOM.render(<ClassComponent />, document.getElementById('appClass'));
+      ReactDOM.render(
+        <FunctionComponent />,
+        document.getElementById('appFunction')
+      );
     </script>
   </body>
 </html>
