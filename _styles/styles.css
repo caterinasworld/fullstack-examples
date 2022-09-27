@@ -29,22 +29,3 @@ body {
   font-size: 1.2em;
   color: var(--gray1);
 }
-
-.form {
-  width: 400px;
-}
-
-.flex-item,
-.grid-item {
-  padding: 10px;
-  background-color: var(--purple);
-  color: var(--white);
-  font-size: 2.4em;
-  text-align: center;
-}
-
-.flex-item {
-  width: 160px;
-  height: 80px;
-  margin: 10px;
-}
