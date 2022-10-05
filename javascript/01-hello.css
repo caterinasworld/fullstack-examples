@@ -1,0 +1,12 @@
+* {
+    font-family: sans-serif;
+}
+
+.form-element {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.blue-border {
+    border: 1px solid blue;
+}
