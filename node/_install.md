@@ -14,12 +14,14 @@ Verify that nvm has been installed.
 
 ```bash
 command -v nvm
+nvm
 ```
 
 Check version of nvm.
 
 ```bash
 nvm -v
+0.39.1
 ```
 
 Check versions on Node.js available.
