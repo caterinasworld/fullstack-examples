@@ -1,7 +1,7 @@
 // example adapted from the Nodejs.org docs
 const static = require('node-static');
 const http = require('http');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 // static files are in the public/ directory
 const file = new static.Server('./public');

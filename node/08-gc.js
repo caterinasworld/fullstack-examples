@@ -1,5 +1,5 @@
 const http = require('http');
-const port = 5000 || process.env.PORT;
+const port = process.env.PORT || 5001;
 
 const server = http.createServer((req, res) => {
   let data = [];
