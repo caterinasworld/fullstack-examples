@@ -1,4 +1,4 @@
-let characters = [
+let starwars = [
   {
     id: 1,
     name: 'Luke Skywalker',
@@ -161,4 +161,4 @@ let characters = [
   },
 ];
 
-module.exports = characters;
+module.exports = starwars;
