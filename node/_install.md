@@ -1,6 +1,8 @@
-## Install nvm
+## Installation Instructions
 
-Download the install script via curl or wget.
+These are the installation instructions for nvm, Node.js, and npm. These instructions were adapted from the [nvm Readme page](https://github.com/nvm-sh/nvm).
+
+Download the install script via curl or wget and run it via bash.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
@@ -9,6 +11,15 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
+
+The script above clones the nvm repository to ~/.nvm, and attempts to add the source lines from the snippet below to the correct profile file (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc). If you don't have one of these files on your system, you will need to manually create one and add the information below. For example, you can create a `~/.bash_profile` file and update it with the commands listed below.
+
+```bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+After editing a `~/.bash_profile` file, make sure to save and restart the terminal.
 
 Verify that nvm has been installed.
 
