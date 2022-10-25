@@ -11,13 +11,18 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
   console.log('========== Logging Service: Request Headers ==========');
-  console.log(req.headers);
+  console.log(req.headers.host);
   next();
 });
 
 app.get('/', (req, res, next) => {
   console.log('GET route - main');
   res.send('This is the main route in the 04-middleware example');
+});
+
+app.get('/about', (req, res, next) => {
+  console.log('GET route - about');
+  res.send('This is the about route');
 });
 
 app.listen(port, () => {
