@@ -14,12 +14,21 @@ const server = http.createServer((req, res) => {
     // serve index.html without specifying the file name
     file.serve(req, res);
   }
-  // new route --> handle 404
+
+  // form route
+  else if (req.url === '/form') {
+    console.log(`${req.method} - ${req.url}`);
+
+    // serve index.html without specifying the file name
+    file.serveFile('/form.html', 200, {}, req, res);
+  }
+
+  // any other route --> handle 404
   else {
     console.log(`${req.method} - ${req.url}`);
 
     // server other files by specifying their names
-    file.serveFile('/error.html', 404, {}, req, res);
+    file.serveFile('/error.html', 200, {}, req, res);
   }
 });
 
