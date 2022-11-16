@@ -9,7 +9,7 @@ characters.push('Plankton');
 // characters = [1, 2, 3];
 // characters.push(true);
 function square(num) {
-    return num * num;
+  return num * num;
 }
 square(9);
 // square(firstname);
